@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: risadams/contributors-update@v1
         with:
-          ms: 1000
+          ms: 5000
