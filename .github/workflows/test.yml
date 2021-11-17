@@ -1,0 +1,9 @@
+name: Testing Wait Action
+on: workflow_dispatch
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: risadams/contributors-update@v1
+        with:
+          ms: 1000
