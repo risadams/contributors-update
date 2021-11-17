@@ -20,6 +20,10 @@ describe('environmental variables', () => {
     // Set the variables
     process.env.NODE_ENV = 'dev';
     process.env.INPUT_MS = 50;
+    process.env.INPUT_REPO = 'risadams/risadams.com';
+    process.env.INPUT_OUTPUT = 'CONTRIBUTORS.md';
+    process.env.INPUT_EXCLUDE_BOTS = true;
+    process.env.INPUT_GH_TOKEN = '';
 
     const ip = path.join('src', 'index.js');
     const result = cp.execSync(`node ${ip}`, { env: process.env }).toString();
