@@ -1,0 +1,38 @@
+{
+  "name": "@risadams/contributors-update",
+  "version": "1.0.0",
+  "description": "A GitHub action to update the contributors files",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "jshint",
+    "test": "jest",
+    "prep": "ncc build src/index.js -o dist --source-map --license licenses.txt",
+    "all": "npm run lint && npm run prep && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risadams/contributors-update.git"
+  },
+  "keywords": [
+    "GitHub",
+    "action",
+    "javascript",
+    "learning-by-doing",
+    "contributors"
+  ],
+  "author": "ris adams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/risadams/contributors-update/issues"
+  },
+  "homepage": "https://github.com/risadams/contributors-update#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "0.32.0",
+    "jshint": "2.13.1",
+    "jest": "27.3.1"
+  }
+}
