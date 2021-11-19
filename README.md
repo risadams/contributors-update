@@ -5,6 +5,9 @@ This is a custom GitHub action that updates the contributors list. It is intende
 ## Install
 
 This action is written in JavaScript and can be configured by adding an action to your project's `actions.yml` file.
+You will need to update the `repo` argument with the repository you wish to update.  **this will only work on public repositories**
+
+If the `exclude_bots` flag is disabled, you may see a large number of bots in the output.  There still may be some bots in the output if they are internally classified as users in the github API call.
 
 ```yaml
 name: Update Contributors
