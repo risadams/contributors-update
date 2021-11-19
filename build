@@ -1,0 +1,2 @@
+npm run-script all
+docker build -t contrib-update:v2.0.0 .
