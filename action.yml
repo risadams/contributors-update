@@ -16,4 +16,4 @@ outputs:
     description: "The contents of the contributors file"
 runs:
   using: "node12"
-  main: "src/index.js"
+  main: "dist/index.js"
