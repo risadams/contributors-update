@@ -1,4 +1,4 @@
-name: "Update Contributors"
+name: "[Ris] Updates Contributors File"
 description: "Updates the contributors.md file"
 inputs:
   repo:
