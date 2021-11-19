@@ -1,9 +1,12 @@
-name: Testing Wait Action
+name: Update Contributors
 on: workflow_dispatch
 jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - uses: risadams/contributors-update@v1
+      - uses: risadams/contributors-update@v2
         with:
           ms: 5000
+          repo: risadams/risadams.com
+          exclude_bots: true
+          output: CONTRIBUTORS.md
