@@ -32,7 +32,7 @@ async function run() {
           return;
         }
       }
-      $TEXT += `[${contributor.login}](${contributor.url})` + NEW_LINE;
+      $TEXT += ` - [${contributor.login}](${contributor.url})` + NEW_LINE;
     });
 
     core.info($TEXT);
