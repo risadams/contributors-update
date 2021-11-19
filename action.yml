@@ -1,7 +1,7 @@
 name: "Update Contributors"
 description: "Updates the contributors.md file"
 inputs:
-    repo:
+  repo:
     example: "risadams/risadams.com"
     description: "The repository to watch"
     required: true
