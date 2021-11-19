@@ -11,6 +11,11 @@ inputs:
     description: "Exclude bots from the contributors list"
     required: true
     default: "true"
+  output:
+    example: "./contributors.md"
+    description: "The output file"
+    required: true
+    default: "./contributors.md"
 outputs:
   contribs:
     description: "The contents of the contributors file"

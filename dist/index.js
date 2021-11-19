@@ -5567,12 +5567,14 @@ var __webpack_exports__ = {};
 (() => {
 const core = __nccwpck_require__(186);
 const fetch = __nccwpck_require__(467);
+const fs = __nccwpck_require__(147);
 
 async function run() {
   try {
     core.debug((new Date()).toTimeString()); // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
 
     const repo = core.getInput('repo');
+    const output = core.getInput('output');
     const exclude_bots = core.getInput('exclude_bots');
 
     const NEW_LINE = '\n';
@@ -5582,6 +5584,7 @@ async function run() {
 
     core.info(`Gathering info for repo: ${repo}`);
     core.info(`Skipping bots?: ${exclude_bots}`);
+    core.info(`Writing contributors to: ${output}`);
 
     const contribJsonUrl = `https://api.github.com/repos/${repo}/contributors`;
     core.info(`Gathering contrib info from api: ${contribJsonUrl}`);
@@ -5600,6 +5603,11 @@ async function run() {
     });
 
     core.info($TEXT);
+    fs.writeFile(output, $TEXT, (err) => {
+      if (err) {
+        core.setFailed(err.message);
+      }
+    });
 
     core.info((new Date()).toTimeString());
     core.setOutput('contribs', $TEXT);
