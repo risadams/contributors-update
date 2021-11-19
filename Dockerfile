@@ -11,5 +11,4 @@ COPY . /usr/src/app/
 
 RUN npm install
 
-
-ENTRYPOINT ["./action-entry.sh"]
+ENTRYPOINT ["/usr/src/app/action-entry.sh"]
