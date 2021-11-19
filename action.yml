@@ -16,3 +16,4 @@ outputs:
     description: "The contents of the contributors file"
 runs:
   using: "node14"
+  main: "src/index.js"
