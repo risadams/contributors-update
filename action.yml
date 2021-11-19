@@ -1,12 +1,7 @@
 name: "Update Contributors"
 description: "Updates the contributors.md file"
 inputs:
-  ms:
-    example: "1000"
-    description: "Number of milliseconds to wait"
-    required: true
-    default: "1000"
-  repo:
+    repo:
     example: "risadams/risadams.com"
     description: "The repository to watch"
     required: true
@@ -16,19 +11,8 @@ inputs:
     description: "Exclude bots from the contributors list"
     required: true
     default: "true"
-  output:
-    example: "./contributors.md"
-    description: "The output file"
-    required: true
-    default: "./contributors.md"
 outputs:
-  time:
-    description: "The current time after waiting"
+  contribs:
+    description: "The contents of the contributors file"
 runs:
-  using: "docker"
-  image: "Dockerfile"
-  args:
-    - ${{ inputs.repo }}
-    - ${{ inputs.exclude_bots }}
-    - ${{ inputs.output }}
-    - ${{ inputs.ms }}
+  using: "node14"
