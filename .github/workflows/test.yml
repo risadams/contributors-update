@@ -6,7 +6,5 @@ jobs:
     steps:
       - uses: risadams/contributors-update@v2
         with:
-          ms: 5000
           repo: risadams/risadams.com
           exclude_bots: true
-          output: CONTRIBUTORS.md
