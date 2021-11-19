@@ -13,8 +13,8 @@ RUN apt-get update && apt-get install -y git
 
 COPY . $WORK_DIR_PATH
 
-RUN npm install
+#RUN npm install
 
-RUN ["chmod", "+x", "./action-entry.sh"]
+RUN ["chmod", "+x", "/home/action-entry.sh"]
 
-ENTRYPOINT ["./action-entry.sh"]
+ENTRYPOINT ["/home/action-entry.sh"]
