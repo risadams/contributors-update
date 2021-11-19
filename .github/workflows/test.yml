@@ -4,7 +4,7 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - uses: risadams/contributors-update@v2
+      - uses: risadams/contributors-update@v3
         with:
           repo: risadams/risadams.com
           output: CONTRIBUTORS.md
