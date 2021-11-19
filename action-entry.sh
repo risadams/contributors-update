@@ -7,4 +7,5 @@ echo "writing to: $3!"
 time=$(date)
 echo "::set-output name=time::$time"
 
-node run-script all
+npm install
+npm run-script all

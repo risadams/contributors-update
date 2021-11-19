@@ -1,4 +1,4 @@
-FROM node:latest AS node_base
+FROM node:14.18.1 AS node_base
 
 ENV USER root
 ENV WORK_DIR_PATH /home
@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y git
 
 COPY . $WORK_DIR_PATH
 
-#RUN npm install
+RUN npm install
 
 RUN ["chmod", "+x", "/home/action-entry.sh"]
 
