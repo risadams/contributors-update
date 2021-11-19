@@ -4,11 +4,30 @@ This is a custom GitHub action that updates the contributors list. It is intende
 
 ## Install
 
-`TODO`
+This action is written in JavaScript and can be configured by adding an action to your project's `actions.yml` file.
 
-### Examples
+```yaml
+name: Update Contributors
+on:
+  schedule:
+    - cron: "0 0 1 * *"
+  workflow_dispatch:
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: risadams/contributors-update@v2
+        with:
+          repo: risadams/risadams.com
+          exclude_bots: true
+```
 
-`TODO`
+The file contents will be written to an output variable called `contrib`. Which can be piped to other actions as needed.
+
+## Support
+
+This action is provided as is and is not guaranteed to work. If you have any questions, please open an issue on GitHub.
+This action is written as an experiment and learning exercise.
 
 ## Contribute
 
