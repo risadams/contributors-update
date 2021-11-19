@@ -15,5 +15,5 @@ outputs:
   contribs:
     description: "The contents of the contributors file"
 runs:
-  using: "node14"
+  using: "node12"
   main: "src/index.js"
