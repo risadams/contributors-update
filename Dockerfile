@@ -15,6 +15,6 @@ COPY . $WORK_DIR_PATH
 
 RUN npm install
 
-RUN ["chmod","+x","action-entry.sh"]
+RUN ["chmod", "+x", "./action-entry.sh"]
 
-ENTRYPOINT ["action-entry.sh"]
+ENTRYPOINT ["./action-entry.sh"]
