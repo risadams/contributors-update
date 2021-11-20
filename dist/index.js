@@ -5592,6 +5592,10 @@ async function run() {
     var contribJson = await fetch(contribJsonUrl);
     var contributors = await contribJson.json();
 
+    if (contributors.message && contributors.message === 'Not Found') {
+      core.setFailed(err.message);
+    }
+
     contributors.forEach((contributor) => {
       if (exclude_bots) {
         if (contributor.type === 'Bot') {
@@ -5599,7 +5603,8 @@ async function run() {
           return;
         }
       }
-      $TEXT += ` - [${contributor.login}](${contributor.url})` + NEW_LINE;
+      $TEXT += ` - @[${contributor.login}](${contributor.html_url})`;
+      $TEXT += NEW_LINE;
     });
 
     core.info($TEXT);
