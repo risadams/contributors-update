@@ -32,6 +32,6 @@
   "devDependencies": {
     "@vercel/ncc": "0.32.0",
     "jshint": "2.13.1",
-    "jest": "27.4.2"
+    "jest": "27.4.3"
   }
 }
