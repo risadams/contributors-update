@@ -30,7 +30,7 @@
     "node-fetch": "2.6.7"
   },
   "devDependencies": {
-    "@vercel/ncc": "0.33.3",
+    "@vercel/ncc": "0.33.4",
     "jshint": "2.13.4",
     "jest": "27.5.1"
   }
